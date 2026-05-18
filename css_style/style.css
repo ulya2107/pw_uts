@@ -1,0 +1,44 @@
+body {
+    font-family: Arial;
+    background: #ffe6f0;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    width: 300px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: hotpink;
+    border: none;
+    color: white;
+}
+
+.card {
+    width: 250px;
+    background: white;
+    padding: 15px;
+    margin: 15px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
