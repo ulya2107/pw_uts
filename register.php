@@ -5,7 +5,7 @@ if(isset($_POST['register'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    mysqli_query($conn, "INSERT INTO users VALUES('', '$username', '$password')");
+    mysqli_query($conn, "INSERT INTO userss VALUES('', '$username', '$password')");
 
     header('location:login.php');
 }

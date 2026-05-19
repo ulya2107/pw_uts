@@ -1,42 +1,61 @@
-<?php
-session_start();
-include 'koneksi.php';
-
-if(isset($_POST['login'])){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $data = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password'");
-
-    $cek = mysqli_num_rows($data);
-
-    if($cek > 0){
-        $_SESSION['username'] = $username;
-        header('location:index.php');
-    } else {
-        echo "Login gagal";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#ffe6f0;
+        }
+
+        .login{
+            width:350px;
+            background:white;
+            padding:40px;
+            margin:100px auto;
+            border-radius:20px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            text-align:center;
+            color:hotpink;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-top:15px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            margin-top:20px;
+            background:hotpink;
+            color:white;
+            border:none;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="form-container">
+<div class="login">
+
     <h2>Login</h2>
 
-    <form method="POST">
-        <input type="text" name="username" placeholder="Username" required>
+    <form>
 
-        <input type="password" name="password" placeholder="Password" required>
+        <input type="text" placeholder="Username">
 
-        <button type="submit" name="login">Login</button>
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+
     </form>
+
 </div>
 
 </body>
